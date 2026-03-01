@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+body {
+  background-color: #0f172a;
+  color: white;
+  font-family: Arial;
+}
+
+#menu {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  background-color: #1e293b;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#detail {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+ 
+
+#back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="menu">
+  <h1>Struktur Organisasi Risma Al Aman</h1>
+
+  <button onclick="showDetail('Miko adalah Ketua')">Ketua</button>
+  <button onclick="showDetail('Royan adalah Wakil Ketua')">Wakil Ketua</button>
+  <button onclick="showDetail('Quinnsha adalah Sekretaris')">Sekretaris</button>
+  <button onclick="showDetail('Kaila adalah Bendahara')">Bendahara</button><button>
+</div>
+
+<div id="detail">
+  <button id="back" onclick="goBack()">← Back</button>
+  <h2 id="text"></h2>
+</div>
+
+<script>
+function showDetail(info) {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("detail").style.display = "block";
+  document.getElementById("text").innerHTML = info;
+}
+
+function goBack() {
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("detail").style.display = "none";
+}
+</script>
+
+</body>
+</html>
